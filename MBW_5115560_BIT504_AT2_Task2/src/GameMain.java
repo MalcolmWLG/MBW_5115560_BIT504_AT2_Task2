@@ -3,9 +3,14 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class GameMain extends JPanel implements MouseListener {
-    /**
-	 * 
-	 */
+   	
+	/* Represents the current state of the game. */
+    public enum GameState {
+    	  Playing,      // The game is Ongoing
+    	  Draw,         // The game is a Draw
+    	  Cross_won,    // 'X' has won
+    	  Nought_won    // 'O' has won
+    	}
 	private static final long serialVersionUID = 1L;
 	// Constants for game 
     public static final int ROWS = 3;
@@ -28,7 +33,10 @@ public class GameMain extends JPanel implements MouseListener {
 
     /** Constructor to set up the UI and game components on the panel */
     public GameMain() {
-        // Add MouseListener for mouse click events
+
+    
+
+    	// Add MouseListener for mouse click events
         addMouseListener(this);
 
         // Set up the status bar (JLabel) to display the status message
@@ -48,7 +56,7 @@ public class GameMain extends JPanel implements MouseListener {
         // Create a new instance of the game "Board" class
         board = new Board();
 
-        // Initialize the game board
+        // Initialise the game board
         initGame();
     }
 
@@ -69,7 +77,7 @@ public class GameMain extends JPanel implements MouseListener {
 
     /** Custom painting code on this JPanel */
     public void paintComponent(Graphics g) {
-        // Fill the background and set color to white
+        // Fill the background and set colour to white
         super.paintComponent(g);
         setBackground(Color.WHITE);
 

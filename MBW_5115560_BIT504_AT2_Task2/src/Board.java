@@ -1,5 +1,7 @@
 import java.awt.*;
 
+/** Board */
+
 public class Board {
     // grid line width
     public static final int GRID_WIDTH = 8;
