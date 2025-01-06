@@ -24,6 +24,15 @@ public class GameMain extends JPanel implements MouseListener {
 
     /** Constructor to set up the UI and game components on the panel */
     public GameMain() {
+        
+    /* Represents the current state of the game.  */
+    public enum GameState {
+        Playing,      // The game is ongoing
+        Draw,         // The game is a draw
+        Cross_won,    // 'X' has won
+        Nought_won    // 'O' has won
+}
+
         // Add MouseListener for mouse click events
         addMouseListener(this);
 
