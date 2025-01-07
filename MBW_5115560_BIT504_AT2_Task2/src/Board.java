@@ -18,7 +18,7 @@ public class Board {
 
         for (int row = 0; row < GameMain.ROWS; ++row) {
             for (int col = 0; col < GameMain.COLS; ++col) {
-                cells[row][col] = new Cell(row, col); // Create a new Cell for each position
+                cells[row][col] = new Cell(row, col); // Create a new cell for each position
             }
         }
     }

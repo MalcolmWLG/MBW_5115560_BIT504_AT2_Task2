@@ -13,8 +13,7 @@ public class Cell {
     public Cell(int row, int col) {
         this.row = row; // Initialise row
         this.col = col; // Initialise col
-        this.content = Player.Empty; // Set the default content of the cell to Empty
-    }
+        this.content = Player.Empty; // Set the default content of the cell to empty
 
     /** Paint on the graphics canvas, given the Graphics context g */
     public void paint(Graphics g) {
